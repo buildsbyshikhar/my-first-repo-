@@ -1,0 +1,217 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI/ML Master Roadmap V2.1 — Zero → AI Research</title><style>
+:root{--bg:#080c18;--card:#11182b;--card2:#0d1425;--text:#eef3ff;--muted:#aab6cf;--accent:#8b7cff;--good:#55d6a7;--warn:#ffd166;--bad:#ff7b8b;--line:#293554}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#070b16,#111a31);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.65}
+.wrap{max-width:1180px;margin:auto;padding:34px 20px 70px}.hero,.card{background:rgba(17,24,43,.96);border:1px solid var(--line);border-radius:20px;padding:24px;margin:18px 0;box-shadow:0 12px 35px rgba(0,0,0,.16)}
+.hero{padding:34px}.tag{display:inline-block;padding:5px 10px;border:1px solid #3a4770;border-radius:999px;color:#c9c2ff;font-size:12px;margin:3px}
+h1{font-size:42px;line-height:1.08;margin:8px 0 14px}h2{font-size:27px;margin-top:8px}h3{color:#d9dfff;margin-bottom:7px}
+p,li{color:var(--muted)}strong{color:var(--text)}a{color:#b9b0ff;text-decoration:none}a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.mini{background:var(--card2);border:1px solid var(--line);border-radius:15px;padding:16px}
+table{width:100%;border-collapse:collapse;margin:14px 0}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:#fff;background:#151e35}td{color:var(--muted)}
+.callout{border-left:4px solid var(--accent);padding:14px 17px;background:#10182b;border-radius:10px;margin:15px 0}.good{border-left-color:var(--good)}.warn{border-left-color:var(--warn)}
+code{background:#090e1b;border:1px solid #26314d;border-radius:6px;padding:2px 6px;color:#d9dfff}.check{color:var(--good)}
+.small{font-size:13px;color:#8996b2}.footer{margin-top:35px;color:#7f8ba7;font-size:13px}
+</style></head><body><div class="wrap">
+<section class="hero">
+<span class="tag">V2.1 • FINAL FOUNDATION PASS</span><span class="tag">Zero → Deep Learning → AI Research</span><span class="tag">Math + CS + AI</span>
+<h1>AI / ML Master Roadmap</h1>
+<p><strong>The corrected version.</strong> This roadmap is deliberately built for someone who may start with weak mathematics and still wants to reach serious Deep Learning, modern AI, model-building, systems and research. DSA is now a first-class pillar instead of an afterthought.</p>
+<div class="callout good"><strong>Core rule:</strong> learn foundations in order, but do not wait years before building. Every stage has a build/test milestone.</div>
+</section>
+
+<section class="card">
+<h2>0. What “complete” means here</h2>
+<p>This is not a list of every AI buzzword. It is a dependency-aware curriculum. You do <strong>not</strong> need to master every advanced topic before moving forward.</p>
+<div class="grid">
+<div class="mini"><h3>Must master</h3><p>Math foundations, Python, discrete math, DSA, algorithms, statistics, ML, Deep Learning, PyTorch, experimentation, Git/Linux, software engineering and model training.</p></div>
+<div class="mini"><h3>Must understand</h3><p>OS, networking, databases, GPU/memory concepts, MLOps, distributed training, inference, security, RAG, agents, multimodal and evaluation.</p></div>
+<div class="mini"><h3>Specialize later</h3><p>RL research, CUDA kernels, advanced distributed systems, multimodal research, biological foundation models, generative biology and specialized architectures.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>1. The dependency spine</h2>
+<table><tr><th>Stage</th><th>What you build</th><th>Exit test</th></tr>
+<tr><td>0. Arithmetic</td><td>Numbers, fractions, ratios, percentages, powers, roots, scientific notation</td><td>Solve mixed problems without relying on a calculator for every step.</td></tr>
+<tr><td>1. Algebra & functions</td><td>Equations, inequalities, polynomials, quadratics, functions, graphs, logs, exponentials, basic trig</td><td>Manipulate equations and interpret graphs confidently.</td></tr>
+<tr><td>2. Python & problem solving</td><td>Python syntax, functions, collections, modules, files, exceptions, debugging, Git</td><td>Build small CLI/data projects without copying line-by-line tutorials.</td></tr>
+<tr><td>3. Discrete mathematics</td><td>Logic, sets, relations, proofs, induction, counting, graphs, recurrences, asymptotics, discrete probability</td><td>Explain why an algorithm is correct and estimate its growth.</td></tr>
+<tr><td>4. DSA & algorithms</td><td>Arrays, linked lists, stacks, queues, hashing, trees, heaps, graphs, sorting, searching, DP, greedy, divide-and-conquer</td><td>Implement core structures and solve unfamiliar problems by choosing an appropriate structure/algorithm.</td></tr>
+<tr><td>5. Core CS</td><td>OS, networking, databases, architecture, concurrency, memory, HTTP, SQL</td><td>Explain what happens from Python code → OS → network/database/GPU at a practical level.</td></tr>
+<tr><td>6. Math for ML</td><td>Linear algebra, calculus, probability, statistics, numerical methods</td><td>Derive/interpret gradients, matrix operations, likelihoods and common ML metrics.</td></tr>
+<tr><td>7. Data + classical ML</td><td>NumPy, pandas, SQL, EDA, leakage, preprocessing, regression, classification, trees, boosting, clustering, PCA</td><td>Complete an end-to-end ML experiment with a defensible evaluation.</td></tr>
+<tr><td>8. Deep Learning</td><td>Neural nets, backprop, optimization, CNNs, RNNs, attention, Transformers, generative DL</td><td>Implement and train small models; diagnose under/overfitting and optimization failures.</td></tr>
+<tr><td>9. Modern AI</td><td>LLMs, RAG, fine-tuning, PEFT, agents, multimodal, reasoning/test-time compute</td><td>Build an evaluated system and explain its failure modes.</td></tr>
+<tr><td>10. AI systems + research</td><td>Profiling, distributed training, inference, quantization, MLOps, security, evaluation, paper reproduction</td><td>Reproduce a paper/result, run ablations, and ship a measurable model/service.</td></tr>
+</table>
+</section>
+
+<section class="card">
+<h2>2. Mathematics from absolute zero</h2>
+<div class="grid">
+<div class="mini"><h3>2A • Arithmetic</h3><ul><li>Whole numbers, integers, order of operations</li><li>Fractions, decimals, percentages</li><li>Ratios, proportions, units</li><li>Negative numbers</li><li>Powers, roots, scientific notation</li><li>Estimation and mental arithmetic</li></ul></div>
+<div class="mini"><h3>2B • Algebra</h3><ul><li>Variables and expressions</li><li>Linear equations/inequalities</li><li>Polynomials and factoring</li><li>Quadratics</li><li>Functions, domain/range</li><li>Coordinate geometry and slope</li><li>Exponentials and logarithms</li></ul></div>
+<div class="mini"><h3>2C • Trigonometry</h3><ul><li>Angles and radians</li><li>sin/cos/tan</li><li>Unit circle</li><li>Basic identities</li><li>Graphs and periodicity</li></ul></div>
+<div class="mini"><h3>2D • Linear algebra</h3><ul><li>Vectors, matrices, tensors</li><li>Dot products, norms, distances</li><li>Matrix multiplication</li><li>Systems of equations</li><li>Linear transformations</li><li>Rank, independence, basis</li><li>Eigenvalues/eigenvectors</li><li>Orthogonality, projections, SVD, PCA</li></ul></div>
+<div class="mini"><h3>2E • Calculus</h3><ul><li>Functions and limits intuition</li><li>Derivatives and chain rule</li><li>Partial derivatives</li><li>Gradients and directional derivatives</li><li>Optimization</li><li>Jacobian and Hessian</li></ul></div>
+<div class="mini"><h3>2F • Probability & statistics</h3><ul><li>Conditional probability and Bayes</li><li>Random variables</li><li>Expectation, variance, covariance</li><li>Bernoulli/binomial/Gaussian</li><li>Sampling and standard error</li><li>Confidence intervals and hypothesis tests</li><li>MLE/MAP, calibration, correlation vs causation</li></ul></div>
+<div class="mini"><h3>2G • Numerical foundations</h3><ul><li>Floating-point representation</li><li>Precision, overflow/underflow</li><li>Numerical stability</li><li>Finite differences</li><li>Conditioning</li><li>Numerical optimization intuition</li></ul></div>
+</div>
+<div class="callout warn"><strong>Study rule:</strong> do not “finish math” by watching videos. For each concept: learn → solve problems → implement a tiny example in Python → explain it in your own words.</div>
+</section>
+
+<section class="card">
+<h2>3. Discrete Mathematics — now a real core stage</h2>
+<p>MIT’s current 6.1200J curriculum explicitly includes logic, sets, relations, graph theory, state machines/invariants, induction, contradiction, recurrences, asymptotics, algorithm analysis, counting and discrete probability. citeturn0search0</p>
+<ul><li>Logic, propositions, predicates, implication, equivalence</li><li>Sets, Cartesian products, power sets</li><li>Relations, equivalence relations, partial orders</li><li>Direct proof, contradiction, contrapositive, induction, strong induction</li><li>Counting, permutations, combinations, pigeonhole principle</li><li>Graphs, trees, DAGs, connectivity, coloring</li><li>State machines and invariants</li><li>Recurrence relations and asymptotic notation</li><li>Discrete probability</li></ul>
+<p><strong>Primary:</strong> <a href="https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/">MIT 6.1200J</a>. Use its lectures/problem sets as the serious track; use simpler explanations only when necessary.</p>
+</section>
+
+<section class="card">
+<h2>4. DSA + Algorithms — first-class, not interview filler</h2>
+<p>MIT 6.006 expects Python and discrete-math foundations and covers dynamic arrays, heaps, balanced BSTs, hash tables, sorting, graph searching, dynamic programming and algorithm analysis. citeturn0search2 Stanford CS106B similarly emphasizes recursion, algorithm analysis, data abstraction, classic data structures and algorithms. citeturn0search11</p>
+<div class="grid">
+<div class="mini"><h3>Data structures</h3><ul><li>Arrays/dynamic arrays</li><li>Strings</li><li>Linked lists</li><li>Stacks/queues/deques</li><li>Hash tables and collision handling</li><li>Binary trees/BSTs</li><li>Heaps/priority queues</li><li>Tries</li><li>Graphs: adjacency list/matrix</li><li>Union-find</li><li>Advanced awareness: B-trees, Fenwick/segment trees</li></ul></div>
+<div class="mini"><h3>Algorithms</h3><ul><li>Linear/binary search</li><li>Insertion/selection/merge/quick/heap sort</li><li>Recursion and divide-and-conquer</li><li>BFS/DFS, components, cycle detection</li><li>Topological sorting</li><li>Dijkstra; Bellman-Ford awareness</li><li>Kruskal/Prim</li><li>Greedy algorithms</li><li>Dynamic programming</li><li>Backtracking</li><li>Memoization/tabulation</li></ul></div>
+<div class="mini"><h3>Analysis</h3><ul><li>Big-O, Ω, Θ</li><li>Best/average/worst case</li><li>Recurrences</li><li>Amortized analysis</li><li>Time/space tradeoffs</li><li>Correctness arguments</li></ul></div>
+</div>
+<p><strong>Do not turn this into competitive programming.</strong> Target strong undergraduate CS fundamentals. Implement the core structures yourself, then solve a deliberate set of problems. Quality of reasoning matters more than a giant LeetCode count.</p>
+<p><strong>Primary:</strong> <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/">MIT 6.006</a>. <strong>Bridge:</strong> <a href="https://web.stanford.edu/class/cs106b/">Stanford CS106B</a>. <strong>Reference:</strong> CLRS.</p>
+</section>
+
+<section class="card">
+<h2>5. Core Computer Science for an AI engineer</h2>
+<div class="grid">
+<div class="mini"><h3>Operating systems</h3><p>Processes, threads, scheduling, virtual memory, filesystems, concurrency, locks, race conditions.</p></div>
+<div class="mini"><h3>Computer architecture</h3><p>CPU, cache, RAM, memory hierarchy, SIMD, GPU concepts, VRAM, bandwidth, FLOPs and parallelism.</p></div>
+<div class="mini"><h3>Networking</h3><p>IP, TCP/UDP, DNS, HTTP/HTTPS, sockets, latency, bandwidth, REST APIs.</p></div>
+<div class="mini"><h3>Databases</h3><p>SQL, relational model, indexes, transactions, normalization and query-planning basics.</p></div>
+<div class="mini"><h3>Software engineering</h3><p>Git/GitHub, testing, type hints, logging, packaging, project structure, APIs, FastAPI, Docker, CI basics.</p></div>
+<div class="mini"><h3>Distributed systems</h3><p>Later-stage awareness: replication, sharding, queues, consistency, fault tolerance and distributed computation.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>6. Data → Classical ML</h2>
+<ul><li>NumPy, pandas, Matplotlib, Jupyter</li><li>Data cleaning, missing values, duplicates, outliers</li><li>EDA and visualization</li><li><strong>Leakage detection and provenance</strong></li><li>Train/validation/test and cross-validation</li><li>Feature engineering and preprocessing</li><li>SQL for analytical data work</li><li>Linear/ridge/lasso/elastic-net regression</li><li>Logistic regression and softmax</li><li>KNN, Naive Bayes, SVM/kernels</li><li>Decision trees, random forests, bagging</li><li>Boosting; XGBoost/LightGBM/CatBoost</li><li>K-means, hierarchical clustering, DBSCAN</li><li>PCA and anomaly detection</li><li>Precision/recall/F1, ROC-AUC, PR-AUC, calibration, regression metrics</li><li>Class imbalance and threshold selection</li></ul>
+</section>
+
+<section class="card">
+<h2>7. Deep Learning — the core specialization</h2>
+<div class="grid">
+<div class="mini"><h3>Neural foundations</h3><p>Perceptron, affine layers, activations, loss functions, computational graphs, forward pass, backpropagation and autograd.</p></div>
+<div class="mini"><h3>Optimization</h3><p>SGD, mini-batches, momentum, Nesterov, Adam/AdamW, weight decay, LR schedules, warmup, gradient clipping, Xavier/He initialization.</p></div>
+<div class="mini"><h3>Generalization</h3><p>Under/overfitting, dropout, augmentation, early stopping, BatchNorm, LayerNorm, residual connections and data quality.</p></div>
+<div class="mini"><h3>PyTorch</h3><p>Tensors/devices, Dataset/DataLoader, nn.Module, autograd, training loops, checkpoints, CUDA, mixed precision, gradient accumulation, profiling and reproducibility.</p></div>
+<div class="mini"><h3>Computer vision</h3><p>Convolution, channels, stride, padding, receptive fields, pooling, ResNet, transfer learning, classification, detection and segmentation concepts.</p></div>
+<div class="mini"><h3>Sequence modeling</h3><p>RNN/LSTM/GRU, BPTT, teacher forcing, seq2seq, attention, then Transformers.</p></div>
+</div>
+<p><strong>PyTorch primary:</strong> its current beginner sequence is tensors → datasets/data loaders → transforms → model → autograd → optimization → save/load. citeturn0search4turn0search5</p>
+</section>
+
+<section class="card">
+<h2>8. Transformers, LLMs and modern AI</h2>
+<ul><li>Embeddings and representation learning</li><li>Q/K/V, scaled dot-product attention, multi-head attention</li><li>Positional information and RoPE</li><li>Causal masking</li><li>Encoder/decoder and decoder-only architectures</li><li>Residual connections, LayerNorm/RMSNorm, FFNs</li><li>Pretraining objectives and tokenization</li><li>Inference, batching and KV cache</li><li>Prompting vs retrieval vs fine-tuning</li><li>LoRA/QLoRA/PEFT and quantization</li><li>Knowledge retrieval and RAG evaluation</li><li>Tool calling, agent state, memory, planning and execution</li><li>Reasoning, verification and test-time compute</li><li>Multimodal representation, cross-modal attention and evaluation</li></ul>
+</section>
+
+<section class="card">
+<h2>9. Generative + representation learning</h2>
+<ul><li>Autoencoders</li><li>VAEs</li><li>GANs</li><li>Diffusion and DDPM concepts</li><li>Conditioning and sampling</li><li>Contrastive learning</li><li>Self-supervised learning</li><li>Embeddings and metric learning</li></ul>
+</section>
+
+<section class="card">
+<h2>10. AI systems, MLOps and performance</h2>
+<ul><li>Experiment tracking: MLflow/W&amp;B</li><li>Data/model versioning: DVC or equivalent</li><li>Model serving and APIs</li><li>Docker and CI/CD basics</li><li>Monitoring, drift and regression tests</li><li>GPU memory hierarchy and profiling</li><li>Data-loading bottlenecks</li><li>Mixed precision and memory optimization</li><li>DDP, FSDP, tensor/pipeline parallelism awareness</li><li><code>torch.compile</code>, inference batching and caching</li><li>Latency, throughput and cost measurement</li></ul>
+<p>Current PyTorch tutorials explicitly include data-loading optimization, distributed training, serving, memory profiling and debugging, so these belong in the advanced PyTorch/systems phase rather than being forgotten extras. citeturn0search1</p>
+</section>
+
+<section class="card">
+<h2>11. AI reliability + security</h2>
+<ul><li>Data contamination and dataset provenance</li><li>Prompt injection and indirect injection</li><li>RAG poisoning</li><li>Insecure tool use</li><li>Sandboxing and least privilege</li><li>Adversarial evaluation</li><li>Privacy/model-extraction awareness</li><li>Regression suites and red-team evaluation</li><li>Faithfulness, citation correctness and abstention accuracy</li></ul>
+</section>
+
+<section class="card">
+<h2>12. Research track — required for “build my own models”</h2>
+<div class="grid">
+<div class="mini"><h3>Paper literacy</h3><p>Read abstract → method → assumptions → experiments → ablations → limitations. Maintain structured notes.</p></div>
+<div class="mini"><h3>Reproduction</h3><p>Reimplement a manageable paper, publish code/configs, compare metrics, document deviations.</p></div>
+<div class="mini"><h3>Experimentation</h3><p>Hypothesis → baseline → controlled change → ablation → metric → uncertainty → conclusion.</p></div>
+<div class="mini"><h3>Research engineering</h3><p>Seeds, configs, checkpoints, data versions, logs, experiment tracking and reproducible environments.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>13. Build-from-scratch ladder</h2>
+<ol>
+<li>Linear regression with NumPy.</li>
+<li>Logistic regression with NumPy.</li>
+<li>K-means.</li>
+<li>Decision tree.</li>
+<li>One-hidden-layer neural network with manual backprop.</li>
+<li>Mini-batch training loop.</li>
+<li>CNN on a small dataset.</li>
+<li>RNN/LSTM toy sequence model.</li>
+<li>Scaled dot-product attention from scratch.</li>
+<li>Tiny Transformer from scratch.</li>
+<li>Fine-tune a pretrained model with PEFT.</li>
+<li>Build and evaluate a RAG system.</li>
+<li>Build a tool-using agent with security constraints.</li>
+<li>Reproduce a research paper or a well-defined experimental result.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>14. Portfolio ladder</h2>
+<table><tr><th>Level</th><th>Project</th><th>Evidence</th></tr>
+<tr><td>Beginner</td><td>Data analysis</td><td>Clean notebook + written findings</td></tr>
+<tr><td>ML</td><td>Classical ML project</td><td>Baseline, CV, metrics, error analysis</td></tr>
+<tr><td>DL</td><td>CNN/sequence project</td><td>Training curves, ablations, reproducibility</td></tr>
+<tr><td>Transformer</td><td>Small attention/Transformer implementation</td><td>Unit tests + explanation</td></tr>
+<tr><td>GenAI</td><td>RAG or fine-tuning system</td><td>Evaluation set, retrieval metrics, latency/cost</td></tr>
+<tr><td>Systems</td><td>Served model</td><td>API, Docker, monitoring, benchmark</td></tr>
+<tr><td>Research</td><td>Paper reproduction/extension</td><td>Report, code, configs, ablations</td></tr>
+</table>
+</section>
+
+<section class="card">
+<h2>15. What NOT to learn yet</h2>
+<ul><li>Every new AI framework.</li><li>Every new model release.</li><li>Every cloud provider.</li><li>Thousands of LeetCode questions.</li><li>Advanced CUDA before you understand PyTorch performance.</li><li>Huge foundation-model training on a 4 GB VRAM laptop.</li><li>Certificates as a substitute for projects.</li></ul>
+<div class="callout good"><strong>Your RTX 3050 4 GB is a learning machine, not a frontier-training cluster.</strong> Use it for small models, experiments, fine-tuning techniques, inference and systems learning; use cloud/HPC later when the experiment genuinely needs it.</div>
+</section>
+
+<section class="card">
+<h2>15A. Final technical-completeness pass</h2>
+<p>These are the last deliberately included supporting topics. They are not new giant branches of the roadmap; they are compact skills that close practical gaps between mathematics, CS, ML and research.</p>
+<div class="grid">
+<div class="mini"><h3>Numerical computing</h3><p>Floating-point error, numerical stability, conditioning, finite differences, numerical integration, Newton's method, iterative methods and numerical linear algebra.</p></div>
+<div class="mini"><h3>Information theory</h3><p>Entropy, cross-entropy, KL divergence, mutual information, information gain and conditional entropy.</p></div>
+<div class="mini"><h3>Learning theory</h3><p>Bias/variance, empirical risk minimization, regularization, VC-dimension/PAC-learning intuition and generalization bounds.</p></div>
+<div class="mini"><h3>Concurrency</h3><p>Async I/O, <code>asyncio</code>, threads vs processes, queues, synchronization and race conditions.</p></div>
+<div class="mini"><h3>AI data structures</h3><p>LRU caching, inverted indexes, Bloom filters, approximate nearest-neighbor search and vector indexes.</p></div>
+<div class="mini"><h3>Advanced algorithms</h3><p>Randomized algorithms, approximation algorithms and a conceptual introduction to P, NP, reductions and NP-completeness.</p></div>
+<div class="mini"><h3>Research statistics</h3><p>Bootstrap, effect sizes, uncertainty across random seeds, multiple comparisons and statistical vs practical significance.</p></div>
+<div class="mini"><h3>Architecture literacy</h3><p>Parameter count, FLOPs, activation memory, attention complexity, compute-vs-memory bottlenecks, dense vs sparse/MoE tradeoffs.</p></div>
+</div>
+<div class="callout good"><strong>Lock rule:</strong> after these topics are incorporated, do not keep expanding the roadmap just because a new framework, model release or AI trend appears. New topics belong in the specialization/research phase when they become relevant to an actual project.</div>
+</section>
+
+<section class="card">
+<h2>16. Source hierarchy — don't resource-hoard</h2>
+<table><tr><th>Stage</th><th>Primary</th><th>Secondary / intuition</th></tr>
+<tr><td>Math</td><td>Khan Academy</td><td>3Blue1Brown + MIT OCW</td></tr>
+<tr><td>Discrete math</td><td>MIT 6.1200J</td><td>course text / supplementary explanations</td></tr>
+<tr><td>DSA</td><td>MIT 6.006</td><td>Stanford CS106B + CLRS reference</td></tr>
+<tr><td>Python</td><td>Python docs/tutorial</td><td>small projects</td></tr>
+<tr><td>ML</td><td>ISLR + scikit-learn User Guide</td><td>Stanford/Google/Kaggle</td></tr>
+<tr><td>DL</td><td>PyTorch + D2L</td><td>CS230/CS231n</td></tr>
+<tr><td>NLP/LLM</td><td>Stanford CS224N + Hugging Face</td><td>papers / Illustrated Transformer</td></tr>
+<tr><td>Systems</td><td>PyTorch docs + Full Stack Deep Learning</td><td>MLflow/DVC/W&amp;B docs</td></tr>
+<tr><td>Research</td><td>Primary papers</td><td>Papers with Code / Semantic Scholar</td></tr>
+</table>
+</section>
+
+<section class="card">
+<h2>17. The study loop</h2>
+<p><strong>Learn → derive/explain → implement → solve → build → test → document → revisit.</strong></p>
+<p>For every major topic, keep four outputs: <strong>notes, code, questions, project evidence.</strong> The question bank and training lab below are designed around this loop.</p>
+</section>
+<div class="footer">Built as a practical 2026→2027 learning plan. Use one primary source per stage; use secondary sources only when you are stuck or need another explanation.</div></div></body></html>
